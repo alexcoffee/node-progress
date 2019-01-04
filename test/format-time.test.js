@@ -34,3 +34,13 @@ test('hours and minutes', () => {
   let actual = formatEta(37003200)
   expect(actual).toEqual('10h 16.7m')
 })
+
+test('float', () => {
+  let actual = formatEta(3215.123456789)
+  expect(actual).toEqual('3.2s')
+})
+
+test('float minutes and seconds', () => {
+  let actual = formatEta(1003200.1221315649874894)
+  expect(actual).toEqual('16m 43.2s')
+})
